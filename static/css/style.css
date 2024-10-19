@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 80%;
+}
+
+.note {
+    background-color: #ffd700;
+    padding: 20px;
+    border-radius: 10px;
+    color: #121212;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.note h3 {
+    margin-top: 0;
+}
+
+.note img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+input[type="text"], textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1f1f1f;
+    color: white;
+}
+
+input[type="file"] {
+    color: white;
+}
+
+button {
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #121212;
+}
+
+button:hover {
+    background-color: #ffd700;
+}
+
