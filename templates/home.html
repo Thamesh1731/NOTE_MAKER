@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Your Notes</h2>
+    <form action="{{ url_for('search') }}" method="GET">
+        <input type="text" name="query" placeholder="Search notes...">
+        <button type="submit">Search</button>
+    </form>
+    <a href="{{ url_for('add_note') }}">Add a new note</a>
+    <div class="notes">
+        {% for note in notes %}
+        <div class="note">
+            <h3>{{ note['title'] }}</h3>
+            <p>{{ note['body'] }}</p>
+            {% if note['image_url'] %}
+                <img src="{{ note['image_url'] }}" alt="Note Image">
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
